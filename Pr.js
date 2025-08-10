@@ -1,22 +1,8 @@
-const decreaseBtn = document.getElementById("decreaseBtn");
-const reserBtn = document.getElementById("reserBtn");
-const increaseBtn = document.getElementById("increaseBtn");
-const countLabel = document.getElementById("countLabel");
+const myButton = document.getElementById("#myButton");
+const myLabel = document.getElementById("#myLabel");
+let randomNum;
 
-let count = 0;
-
-increaseBtn.onclick = function(){
-    count++;
-    countLabel.textContent = count;
-};
-
-reserBtn.onclick = function(){
-    count = 0;
-    countLabel.textContent = count;
-};
-
-
-decreaseBtn.onclick = function(){
-    count--;
-    countLabel.textContent = count;
+myButton.onclick = function(){
+    randomNum = Math.floor(Math.random() * 5) + 1;
+    myLabel.textContent = randomNum;
 };
